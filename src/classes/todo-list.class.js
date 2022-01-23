@@ -33,6 +33,11 @@ export class TodoList {
     localStorage.setItem('todos', JSON.stringify(this.todos))
   }
 
+  numeroPendientes() {
+    const array = this.todos.filter(todo => !todo.completado)
+    return array.length
+  }
+
   cargarLocalStorage() {
 
     this.todos = JSON.parse(localStorage.getItem('todos')) || []

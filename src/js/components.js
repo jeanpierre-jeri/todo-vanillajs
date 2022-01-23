@@ -7,6 +7,7 @@ const txtInput = document.querySelector('#newTodo')
 const btnBorrarCompletados = document.querySelector('.clear-completed')
 const ulFiltros = document.querySelector('.filters')
 const anchorFiltros = document.querySelectorAll('.filtro')
+const todosPendientes = document.querySelector('.todo-count')
 
 export const crearTodoHTML = ( {tarea, completado, id} ) => {
 
@@ -25,6 +26,7 @@ export const crearTodoHTML = ( {tarea, completado, id} ) => {
   return html
 
 }
+
 
 // Eventos
 
@@ -59,6 +61,8 @@ divTodoList.addEventListener('click', (e) => {
     divTodoList.removeChild(todoElemento)
 
   }
+
+  todosPendientes.children[0].innerText = todoList.numeroPendientes() || 0
 
 })
 
@@ -101,3 +105,4 @@ ulFiltros.addEventListener('click', (e) => {
   })
 
 })
+
