@@ -41,6 +41,7 @@ txtInput.addEventListener('submit', (e) => {
     e.target[0].value = ''
 
   }
+  todosPendientes.children[0].innerText = todoList.numeroPendientes() || 0
 })
 
 divTodoList.addEventListener('click', (e) => {
