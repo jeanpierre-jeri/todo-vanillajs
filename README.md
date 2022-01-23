@@ -1,16 +1,3 @@
-# Webpack Config
+# Vanilla JS Todo App
 
-Esta es una configuración de webpack para poder usarla en proyectos
-
-### Notas:
-Para los modulos de node hay que hacer:
-```
-  npm install
-```
-
-### Producción:
-Para general el build de producción escribir:
-
-```
-  npm run build
-```
+Este es un proyecto en el que hice un todo list con vanilla javascript con webpack
